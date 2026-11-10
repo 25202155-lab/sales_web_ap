@@ -1,45 +1,25 @@
-# Retail Sales Prediction Engine
+# Store Sales Prediction Streamlit App
 
-This application deploys the **Stepwise Selection Regression Model** (Selected at Step 9, R² = 0.6655, Validation ASE = 617,048.48).
+This repository contains the full Streamlit web application for predicting store sales revenue and high-sales classification using machine learning models trained on transaction and economic data.
 
 ## Project Structure
-- `app.py`: Streamlit application code.
+- `app.py`: Streamlit dashboard web application.
+- `train_models.py`: Python script to train models and serialize `model_pipeline.joblib`.
 - `requirements.txt`: Python package dependencies.
-- `sample_batch_input.csv`: Sample CSV file for testing batch predictions.
-- `.streamlit/config.toml`: Custom Streamlit theme configuration.
+- `GROUP 7 [raw data file].csv`: Dataset containing store features and sales targets.
 
-## Quick Start (Local)
+## Setup Instructions
 
-1. Extract the zip archive and navigate into the folder:
-   ```bash
-   cd sales_prediction_app
-   ```
-
-2. Create and activate a virtual environment:
-   - **Windows:**
-     ```cmd
-     python -m venv venv
-     venv\Scripts\activate
-     ```
-   - **macOS / Linux:**
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
-
-3. Install required dependencies:
+1. **Unzip the project files** into your workspace.
+2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
-
-4. Launch the web application:
+3. **Train the models**:
+   ```bash
+   python train_models.py
+   ```
+4. **Run the Streamlit app**:
    ```bash
    streamlit run app.py
    ```
-
-## Cloud Deployment (Streamlit Community Cloud)
-
-1. Push all files to a GitHub repository.
-2. Go to [share.streamlit.io](https://share.streamlit.io/).
-3. Connect your GitHub repository and set `app.py` as the main file path.
-4. Click **Deploy**.
