@@ -1,25 +1,45 @@
-# 🎈 Blank app template
+# Retail Sales Prediction Engine
 
-A simple Streamlit app template for you to modify!
+This application deploys the **Stepwise Selection Regression Model** (Selected at Step 9, R² = 0.6655, Validation ASE = 617,048.48).
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Project Structure
+- `app.py`: Streamlit application code.
+- `requirements.txt`: Python package dependencies.
+- `sample_batch_input.csv`: Sample CSV file for testing batch predictions.
+- `.streamlit/config.toml`: Custom Streamlit theme configuration.
 
-### How to run it on your own machine
+## Quick Start (Local)
 
-Prerequisite: install `uv` if you don't already have it.
-
-```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-1. Sync the dependencies
-
-   ```
-   $ uv sync
+1. Extract the zip archive and navigate into the folder:
+   ```bash
+   cd sales_prediction_app
    ```
 
-2. Run the app
+2. Create and activate a virtual environment:
+   - **Windows:**
+     ```cmd
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   - **macOS / Linux:**
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
 
+3. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
    ```
-   $ uv run streamlit run streamlit_app.py
+
+4. Launch the web application:
+   ```bash
+   streamlit run app.py
    ```
+
+## Cloud Deployment (Streamlit Community Cloud)
+
+1. Push all files to a GitHub repository.
+2. Go to [share.streamlit.io](https://share.streamlit.io/).
+3. Connect your GitHub repository and set `app.py` as the main file path.
+4. Click **Deploy**.
